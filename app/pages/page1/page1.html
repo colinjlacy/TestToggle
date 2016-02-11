@@ -1,0 +1,23 @@
+<ion-navbar *navbar>
+  <ion-title>Tab 1</ion-title>
+</ion-navbar>
+
+<ion-content padding class="page1">
+
+  <form #dataForm="ngForm" novalidate>
+
+
+        <ion-item no-lines>
+          <ion-label>Some text here</ion-label>
+          <ion-toggle [(ngModel)]="DataItem.published" favorite></ion-toggle>
+        </ion-item>
+
+
+    <button (click)="onSave(dataForm)" type="submit" id="submit" secondary block [disabled]="!dataForm.valid">Save</button>
+
+
+  </form>
+
+  Raw value  {{DataItem.published}}
+
+</ion-content>
